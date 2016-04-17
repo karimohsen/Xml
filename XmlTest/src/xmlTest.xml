@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libraries SYSTEM "validate.dtd">
+<libraries>
+    <library name="library1"  >
+        <location>
+             <![CDATA[
+                ]]>
+        </location>
+        <description>
+            <![CDATA[
+                ]]>
+        </description>
+        <librarian>
+        </librarian>
+        <book title="xyz"   >
+            <author>
+            </author>
+            <isbn>
+            </isbn>
+            <preface>
+                <![CDATA[
+                ]]>
+            </preface>
+            <part title="part1" >
+                <chapter title="chapter1" >
+                    <summary>
+                    <![CDATA[
+                        ]]>
+                    </summary>
+                    <sections>
+                        <paragragh>
+                            <![CDATA[
+                                ]]>
+                        </paragragh>
+                    </sections>
+                </chapter>
+            </part>
+        </book>
+    </library>
+</libraries>

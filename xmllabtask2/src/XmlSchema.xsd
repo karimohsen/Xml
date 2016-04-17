@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="libraries">
+        <xs:complexType>
+            <xs:sequence>  
+                <xs:element name="library" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>   
+            
+                            
+                            <xs:element name="location" type="xs:string" />
+                            <xs:element name="description" type="xs:string" />
+                             <xs:element name="librarian" type="xs:string" />   
+                            <xs:element name="book" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>   
+                                        <xs:element name="author" type="xs:string" />
+                                        <xs:element name="isbn" type="xs:int" />
+                                        <xs:element name="preface" type="xs:string" />
+                                        <xs:element name="part">
+                                            <xs:complexType>
+                                                <xs:sequence>   
+                                                    <xs:element name="chapter" minOccurs="1" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>        
+                                                                <xs:element name="summary" type="xs:string"/>    
+                                                                <xs:element name="sections" minOccurs="1" maxOccurs="unbounded" >
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>        
+                                                                            <xs:element name="paragragh" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="title" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="title" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="title" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
